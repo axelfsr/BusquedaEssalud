@@ -1,0 +1,188 @@
+/* Fondo general */
+body, .login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url('/assets/Fondo5.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tarjeta de login */
+.login-card {
+  background-image: url('/assets/Fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 800px;
+  max-width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  z-index: 1;
+  min-height: 500px;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Parte izquierda - formulario */
+.left-side {
+  width: 50%;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.logo-essalud {
+  width: 300px;
+  height: auto;
+}
+
+.login-card h2 {
+  color: #0072B8;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Checkbox de "Recordarme" */
+.remember-me {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.remember-me input[type="checkbox"] {
+  margin: 0 10px 0 0; /* Espacio entre el checkbox y el texto */
+  width: 18px;
+  height: 18px;
+  accent-color: #0072B8;
+}
+
+/* Label de "Recordarme" con ajuste de margen superior */
+.remember-me label {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px; /* Ajusta este valor para bajar el label */
+}
+
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  color: #0072B8;
+  font-size: 18px;
+}
+
+.form-control {
+  width: 90%;
+  padding: 10px 10px 10px 35px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.toggle-password-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  color: #0072B8;
+  font-size: 16px;
+  outline: none;
+  bottom: 27px;
+}
+
+.btn-login {
+  background-color: #0072B8;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 90%;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.btn-login i {
+  font-size: 18px;
+}
+
+.btn-login:hover {
+  background-color: #005a8d;
+  transform: scale(1.05);
+}
+
+.alert {
+  color: #D8000C;
+  background-color: #FFBABA;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.right-side {
+  width: 55%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+.essalud-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}

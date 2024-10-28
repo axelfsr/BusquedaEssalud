@@ -1,0 +1,77 @@
+<div class="search-container">
+  <!-- Cabecera con el título y el botón de logout -->
+  <div class="header">
+    <h1>Búsqueda de Información - EsSalud</h1>
+    <button (click)="logout()" class="btn-logout">Cerrar Sesión</button>
+  </div>
+
+  <!-- Área de búsqueda -->
+  <div class="search-area">
+    <label for="columna">Buscar por:</label>
+    <select [(ngModel)]="columnaSeleccionada" (change)="onColumnaChange()" class="select">
+      <option value="NROPLAZA">NROPLAZA</option>
+      <option value="DNI">DNI</option>
+      <option value="APELLIDOS_Y_NOMBRES">APELLIDOS Y NOMBRES</option>
+    </select>
+
+    <label for="busqueda">Buscar:</label>
+    <div class="input-group">
+      <input type="text" [(ngModel)]="valorBusqueda" (input)="buscarSugerencias()" placeholder="Ingresa un valor" class="input">
+      <ul id="sugerencias" *ngIf="sugerencias.length > 0">
+        <li *ngFor="let sugerencia of sugerencias" (click)="seleccionarSugerencia(sugerencia)">
+          {{ sugerencia }}
+        </li>
+      </ul>
+    </div>
+
+    <button (click)="buscar()" class="btn-search">Buscar</button>
+    <button (click)="limpiar()" class="btn-clear">Borrar</button>
+  </div>
+
+  <!-- Resultados -->
+  <div id="resultados" *ngIf="resultados.length > 0" class="table-container fade-in">
+    <table>
+      <thead>
+        <tr>
+          <th>NROPLAZA</th>
+          <th>CODIGO_UNI</th>
+          <th>DNI</th>
+          <th>APELLIDOS Y NOMBRES</th>
+          <th>NOTA</th>
+          <th>NIVEL</th>
+          <th>CARGO</th>
+          <th>OBSERVACIONES</th>
+          <th>ORGANO</th>
+          <th>DEP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resultado of resultados" (click)="mostrarDetalles(resultado)">
+          <td>{{ resultado.NROPLAZA }}</td>
+          <td>{{ resultado.CODIGO_UNI }}</td>
+          <td>{{ resultado.DNI }}</td>
+          <td>{{ resultado.APELLIDOS_Y_NOMBRES }}</td>
+          <td>{{ resultado.NOTA }}</td>
+          <td>{{ resultado.NIVEL }}</td>
+          <td>{{ resultado.CARGO }}</td>
+          <td>{{ resultado.OBSERVACIONES }}</td>
+          <td>{{ resultado.ORGANO }}</td>
+          <td>{{ resultado.DEP }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal para mostrar detalles -->
+  <div id="detalleModal" *ngIf="mostrarModal" class="modal slide-in">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <h2>Detalles del Registro</h2>
+      <ul>
+        <li *ngFor="let key of detallesKeys">
+          <strong>{{ key }}:</strong> {{ detalles[key] }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
