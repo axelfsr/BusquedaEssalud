@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'https://buscaressalud.onrender.com'; // URL del backend Flask
+  private baseUrl = environment; // URL del backend Flask
 
   constructor(private http: HttpClient, private router: Router) {}
 
