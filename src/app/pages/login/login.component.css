@@ -8,14 +8,22 @@ body, .login-container {
   margin: 0;
   overflow: hidden;
   position: relative;
+<<<<<<< HEAD
   background-image: url('/assets/Fondo5.jpg');
+=======
+  background-image: url('/BusquedaEssalud/assets/Fondo9.jpg');
+>>>>>>> ad3c91a (Cambiando El Front)
   background-size: cover;
   background-position: center;
 }
 
 /* Tarjeta de login */
 .login-card {
+<<<<<<< HEAD
   background-image: url('/assets/Fondo.jpg');
+=======
+  background-image: url('/BusquedaEssalud/assets/Fondo.jpg');
+>>>>>>> ad3c91a (Cambiando El Front)
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -173,10 +181,24 @@ body, .login-container {
   border-radius: 4px;
   font-size: 14px;
 }
+<<<<<<< HEAD
 
 .right-side {
   width: 55%;
   height: 75%;
+=======
+.image-lef-bottom{
+  position: relative;
+  display: flex;
+  width: 450px;
+  height: auto;
+  right: 350px;
+  top: 20px;
+}
+.right-side {
+  width: auto;
+  height: auto;
+>>>>>>> ad3c91a (Cambiando El Front)
   display: flex;
   justify-content: center;
 }
@@ -185,4 +207,8 @@ body, .login-container {
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ad3c91a (Cambiando El Front)

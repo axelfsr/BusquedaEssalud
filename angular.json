@@ -5,24 +5,40 @@
   "projects": {
     "Proyecto_Busqueda": {
       "projectType": "application",
+<<<<<<< HEAD
       "schematics": {},
+=======
+>>>>>>> ad3c91a (Cambiando El Front)
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
+<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/proyecto-busqueda",
             "index": "src/index.html",
             "browser": "src/main.ts",
+=======
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/Proyecto_Busqueda",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+>>>>>>> ad3c91a (Cambiando El Front)
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+<<<<<<< HEAD
               "src/assets",      
               "src/favicon.ico"  
+=======
+              "src/assets",
+              "src/favicon.ico"
+>>>>>>> ad3c91a (Cambiando El Front)
             ],
             "styles": [
               "src/styles.css"
@@ -49,7 +65,12 @@
                   "maximumError": "4kB"
                 }
               ],
+<<<<<<< HEAD
               "outputHashing": "all"
+=======
+              "outputHashing": "all",
+              "baseHref": "/BusquedaEssalud/"
+>>>>>>> ad3c91a (Cambiando El Front)
             },
             "development": {
               "optimization": false,
@@ -63,10 +84,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "Proyecto_Busqueda:build:production"
             },
             "development": {
               "buildTarget": "Proyecto_Busqueda:build:development"
+=======
+              "browserTarget": "Proyecto_Busqueda:build:production"
+            },
+            "development": {
+              "browserTarget": "Proyecto_Busqueda:build:development"
+>>>>>>> ad3c91a (Cambiando El Front)
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +111,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+<<<<<<< HEAD
               "src/assets",      
+=======
+              "src/assets",
+>>>>>>> ad3c91a (Cambiando El Front)
               "src/favicon.ico"
             ],
             "styles": [
@@ -91,6 +123,15 @@
             ],
             "scripts": []
           }
+<<<<<<< HEAD
+=======
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "cname": "axelfsr.github.io/Proyecto_Busqueda"
+          }
+>>>>>>> ad3c91a (Cambiando El Front)
         }
       }
     }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Fondo general */
 body, .search-container {
   height: 100vh;
@@ -8,11 +9,22 @@ body, .search-container {
   margin: 0;
   background-image: url('/assets/Fondo6.jpg');
   background-size: cover;
+=======
+/* Estilos generales */
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('/BusquedaEssalud/assets/Fondo10.jpg');
+  background-size: cover;
+  background-position: center;
+>>>>>>> ad3c91a (Cambiando El Front)
   color: #333;
 }
 
 /* Contenedor principal */
 .search-container {
+<<<<<<< HEAD
   padding: 20px;
   width: 100%;
   max-width: 1200px;
@@ -27,29 +39,65 @@ body, .search-container {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+=======
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Cabecera */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 .header h1 {
   color: #0072B8;
+<<<<<<< HEAD
   font-size: 24px;
   flex: 1; /* Hace que el título ocupe más espacio */
+=======
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 .btn-logout {
   background-color: #D9534F;
   color: #FFFFFF;
   border: none;
+<<<<<<< HEAD
   padding: 10px 20px;
+=======
+  padding: 12px 25px;
+>>>>>>> ad3c91a (Cambiando El Front)
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+<<<<<<< HEAD
   margin-left: 20px; /* Empuja el botón hacia el extremo derecho */
+=======
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 .btn-logout:hover {
   background-color: #C9302C;
 }
+<<<<<<< HEAD
 /* Área de búsqueda */
 .search-area {
   display: flex;
@@ -58,10 +106,43 @@ body, .search-container {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+=======
+
+/* Área de búsqueda */
+.search-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.search-area label {
+  font-size: 16px;
+  color: #0072B8;
+  font-weight: bold;
+}
+
+.select, .input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #0072B8;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.select:focus, .input:focus {
+  border-color: #005a8d;
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 .input-group {
   position: relative;
+<<<<<<< HEAD
   width: 300px;
 }
 
@@ -79,10 +160,29 @@ body, .search-container {
 
 .btn-search, .btn-clear {
   padding: 10px 20px;
+=======
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Contenedor para los botones alineados a la derecha */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px; /* Empuja los botones a la derecha */
+}
+
+.btn-search, .btn-clear {
+  padding: 12px 25px;
+>>>>>>> ad3c91a (Cambiando El Front)
   font-size: 16px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  transition: background-color 0.3s;
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 .btn-search {
@@ -90,15 +190,19 @@ body, .search-container {
   color: #FFFFFF;
 }
 
+<<<<<<< HEAD
 .btn-clear {
   background-color: #ccc;
   color: #333;
 }
 
+=======
+>>>>>>> ad3c91a (Cambiando El Front)
 .btn-search:hover {
   background-color: #005a8d;
 }
 
+<<<<<<< HEAD
 /* Animación de la tabla */
 .table-container.fade-in {
   animation: fadeIn 0.8s ease-in-out;
@@ -119,11 +223,54 @@ body, .search-container {
   max-width: 100%;
   overflow-x: auto;
   margin-top: 20px;
+=======
+.btn-clear {
+  background-color: #6c757d;
+  color: #FFFFFF;
+}
+
+.btn-clear:hover {
+  background-color: #5a6268;
+}
+
+/* Sugerencias de autocompletar */
+#sugerencias {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+#sugerencias li {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#sugerencias li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Tabla de resultados */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  animation: fadeIn 0.8s ease-in-out;
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+<<<<<<< HEAD
 }
 
 table, th, td {
@@ -133,10 +280,20 @@ table, th, td {
 th, td {
   padding: 10px;
   text-align: center;
+=======
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+>>>>>>> ad3c91a (Cambiando El Front)
 }
 
 th {
   background-color: #0072B8;
+<<<<<<< HEAD
   color: #fff;
 }
 
@@ -225,12 +382,106 @@ ul#sugerencias li:hover {
 .close {
   color: #aaa;
   float: right;
+=======
+  color: #FFFFFF;
+  position: sticky;
+  top: 0;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeInModal 0.5s ease-out;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  animation: slideInModal 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInModal {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #aaa;
+>>>>>>> ad3c91a (Cambiando El Front)
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .close:hover, .close:focus {
   color: black;
   text-decoration: none;
+=======
+.close:hover {
+  color: #000;
+}
+
+/* Estilos adicionales */
+.modal-content h2 {
+  margin-top: 0;
+  color: #0072B8;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-content ul li strong {
+  color: #0072B8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 24px;
+  }
+  
+  .search-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-search, .btn-clear, .btn-logout {
+    width: 100%;
+  }
+>>>>>>> ad3c91a (Cambiando El Front)
 }
